@@ -27,6 +27,7 @@ class Television:
                 self.__muted = True
 
     def channel_up(self) -> None:
+        """Method to increase channel number"""
         if self.__status:
             if self.__channel < Television.MAX_CHANNEL:
                 self.__channel += 1
@@ -35,7 +36,7 @@ class Television:
 
     def channel_down(self) -> None:
         """
-        Method to describe the tv channel
+        Method to decrease the channel number
         """
         if self.__status:
             if self.__channel > Television.MIN_CHANNEL:
@@ -44,6 +45,7 @@ class Television:
                 self.__channel = Television.MAX_CHANNEL
 
     def volume_up(self) -> None:
+        """Method to increase the TV volume"""
         if self.__status:
             self.__muted = False
             if self.__volume < Television.MAX_VOLUME:
@@ -52,6 +54,7 @@ class Television:
                 self.__volume = Television.MAX_VOLUME
 
     def volume_down(self) -> None:
+        """Method to decrease the TV volume"""
         if self.__status:
             self.__muted = False
             if self.__volume > Television.MIN_VOLUME:
